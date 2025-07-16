@@ -9,6 +9,9 @@ public class Product {
     private boolean expireable;
     private boolean shipable;
 
+    public Product() {
+    }
+
     public Product(String productName, String productPrice, int productQuantity, int productWeight) {
         this.productName = productName;
         this.productPrice = productPrice;
@@ -16,6 +19,7 @@ public class Product {
         this.productWeight = productWeight;
 
     }
+
 
 
     public String getProductName() {
