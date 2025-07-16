@@ -1,22 +1,32 @@
 package entity;
+import java.time.LocalDateTime;
 
 public class Product {
 
     private String productName;
-    private String productPrice;
+    private double productPrice;
     private int productQuantity;
-    private int productWeight;
+    private double productWeight;
     private boolean expireable;
     private boolean shipable;
+    LocalDateTime expirationDate;
 
-    public Product() {
-    }
 
-    public Product(String productName, String productPrice, int productQuantity, int productWeight) {
+    public Product(String productName, double productPrice, int productQuantity, double productWeight) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
         this.productWeight = productWeight;
+
+    }
+    public Product(String productName, double productPrice, int productQuantity, double productWeight, boolean expireable, boolean shipable,LocalDateTime expirationDate) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productQuantity = productQuantity;
+        this.productWeight = productWeight;
+        this.expireable = expireable;
+        this.shipable = shipable;
+        this.expirationDate = expirationDate;
 
     }
 
@@ -30,15 +40,15 @@ public class Product {
         this.productName = productName;
     }
 
-    public String getProductPrice() {
+    public double getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(String productPrice) {
+    public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
 
-    public int getProductQuantity() {
+    public double getProductQuantity() {
         return productQuantity;
     }
 
@@ -46,7 +56,7 @@ public class Product {
         this.productQuantity = productQuantity;
     }
 
-    public int getProductWeight() {
+    public double getProductWeight() {
         return productWeight;
     }
 
@@ -68,6 +78,14 @@ public class Product {
 
     public void setShipable(boolean shipable) {
         this.shipable = shipable;
+    }
+
+    public LocalDateTime getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(LocalDateTime expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
     @Override
