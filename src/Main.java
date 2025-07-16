@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Product product = new Product();
-        product.setProductName("eissa");
+        Product product = new Product("makarona",122.0, 12,122.0);
+
         System.out.println("Product Name: " + product.getProductName());
 
 
